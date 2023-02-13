@@ -17,7 +17,7 @@ ul {
     display: inline-flex;
     list-style: none;
     white-space: nowrap;
-    margin-left: -270px;
+    margin-left: -195px;
     margin-top: 40px;
 }
 
@@ -114,8 +114,8 @@ button:hover{
 .learn {
     position: absolute;
     text-align: center;
-    margin-top: 360px;
-    padding-top: 50px;
+    margin-top: 355px;
+    padding-top: 100px;
     display: block;
     color: rgba(255, 217, 0, 0);
     background-color: rgb(255, 217, 0);
@@ -129,7 +129,7 @@ button:hover{
 .connect {
     position: absolute;
     text-align: center;
-    margin-top: 385px;
+    margin-top: 435px;
     margin-left: 100px;
     display: block;
     color: rgb(0, 0, 0);
@@ -149,7 +149,7 @@ button:hover{
     color: black;
     font-weight: 500;
     margin-left: 650px;
-    margin-top: 435px;
+    margin-top: 500px;
     border-color: rgb(0, 0, 0);
 }
 
@@ -165,7 +165,7 @@ button:hover{
         display: inline-block;
         padding: 8px;
         margin-left: 637px;
-        margin-top: 490px;
+        margin-top: 550px;
     }
 
     .down {
@@ -180,6 +180,6 @@ button:hover{
         font-weight: 200;
         font-size: 30px;
         margin-left: 685px;
-        margin-top: 45px;
+        margin-top: 50px;
         padding-bottom: 500px;
       }
