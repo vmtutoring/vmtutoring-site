@@ -3,58 +3,90 @@
 }
 
 #logo {
+    position: relative;
     display: inline-flex;
-    justify-content: space-between;
-    margin-left: 50px;
-}
-
-#logo img {
-    width: 30%;
+    margin-top: -0.5%;
+    margin-left: 0%;
+    width: 50%;
     height: auto;
 }
 
-ul {
-    display: inline-flex;
-    list-style: none;
-    white-space: nowrap;
-    margin-left: -380px;
-    margin-top: 40px;
+#logo img {
+  position: relative;
 }
 
-.foot {
+ul {
+  z-index: 10;
+  position: relative;
     display: inline-flex;
     list-style: none;
     white-space: nowrap;
-    margin-left: -100px;
-    margin-top: 1050px;
+    margin-left: -20%;
+    margin-top: 7%;
+    background-color: #00000000;
+    width: 100%;
+  }
+
+@media only screen and (max-width: 1300px) {
+  ul {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .dropbtn {
+    visibility: hidden;
+        }
 }
 
 li {
-    margin-left: 30px;
+    margin-left: 0;
+    margin-right: 10%;
+    margin-top: 1.5%;
     background-color: rgba(255, 217, 0, 0);
 }
 
 .header {
+  position: relative;
     display: inline;
-    margin-left: 20%;
+    margin-left: 0%;
     color: white;
+    width: 100%;
+  }
+
+.header.about {
+  margin-left: 90%;
+  padding: 0%
+}
+
+.header.contact {
+  margin-left: 70%;
+  padding: 0%;
+}
+
+.header.faq {
+  margin-left: 350%;
+  padding: 0%;
+}
+
+.header.tutor {
+  margin-left: 140%;
+  padding: 0%;
 }
 
  button { 
     background-color: rgba(0, 0, 0, 0);
     color: white;
-    font-size: 20px;
+    font-size: 1.3vw;
     font-family: "League Spartan";
     font-weight: 200;
     text-transform: uppercase;
     letter-spacing: 2px;
+    padding-left: 2%;
+    padding-right: 2%;
     border: none;
-    margin-left: 15px;
-    margin-right: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 10px;
-    padding-top: 15px;
+    padding-bottom: 5%;
+    padding-top: 1%;
     cursor: pointer;
 }
 
@@ -65,21 +97,13 @@ button.header.home {
     border-left: black;
     border-right: black;
     border-style: solid;
+    padding-left: 3%;
+    padding-right: 10%;
 }
 
 button:hover {
     font-weight: bold;
     animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-    0%,  
-    100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
 }
 
 #book {
@@ -89,86 +113,76 @@ button:hover {
     background-color: gold;
     color: black;
     font-weight: 500;
-    margin-left: 50px;
-    margin-top: -10px;
+    margin-left: 50%;
+    margin-top: -3%;
     border-color: rgb(160, 113, 43);
-    padding: 20px;
-}
-
-.header.faq {
-    margin-left: 0px;
-}
-
-.header.tutor {
-    margin-left: 0px;
-}
-
-.header.contact {
-    margin-left: 15px;
+    padding: 4%;
 }
 
 #study {
   position: absolute;
+  z-index: 0;
   right: 0;
   bottom: 0;
-  top: 150px;
-  min-width: 100%;
-  min-height: 50%;
+  top: 15%;
+  width: 100%;
+  height: auto;
   color: rgba(0, 0, 0, 0.363);
 }
 
-.content {
+.black.box {
   position: absolute;
-  bottom: 0;
-  top: 150px;
-  left: -20px;
-  background: rgba(0, 0, 0, 0.171);
-  color: black;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 90px;
-  padding-right: 20px;
+  width: 105%;
+  margin-left: -2%;
+  margin-top: 2%;
+  padding-bottom: 15%;
 }
 
 .learn {
     position: absolute;
     text-align: center;
-    margin-top: 355px;
-    padding-top: 45px;
+    margin-top: 18%;
+    padding-bottom: 10%;
     display: block;
     color: rgba(255, 217, 0, 0);
     background-color: rgb(255, 217, 0);
     width: 100%;
-    height: 18%;
-    top: 430px;
+    height: auto;
     left: 0;
-
+    overflow: hidden;
 }
 
 .connect {
+    z-index: 12;
     position: absolute;
     text-align: center;
-    margin-top: 435px;
-    margin-left: 100px;
+    margin-top: 20%;
+    margin-left: -1%;
     display: block;
     color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0);
     font-family: "League Spartan";
     font-weight: 500;
-    font-size: 40px;
+    font-size: 2vw;
+    width: 100%;
+    height: auto;
     
 }
 
 #learn {
-    position: absolute;
+  font-size: 1.5vw;
+  white-space: nowrap;
+    padding: 1%;
+    position: relative;
     display: block;
     border-style: solid;
     border-radius: 15px;
     background-color: gold;
     color: black;
     font-weight: 500;
-    margin-left: 625px;
-    margin-top: 500px;
+    margin-left: 42.7%;
+    margin-top: 23%;
+    width: 15%;
     border-color: rgb(0, 0, 0);
 }
 
@@ -178,242 +192,232 @@ button:hover {
         cursor: pointer;
     }
 
-      .arrow2 {
-        border: solid rgb(255, 217, 0);
-        border-width: 0 8px 8px 0;
-        display: inline-block;
-        padding: 8px;
-        margin-left: 615px;
-        margin-top: 550px;
-    }
-
-    .down {
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-      }
-
     #about {
-        position: absolute;
-        display: block;
+        position: relative;
+        display: flex;
+        align-content: center;
+        width: 0.1%;
+        height: auto;
+        background-color: black;
         color: rgb(255, 255, 255);
         font-weight: 500;
-        font-size: 30px;
-        margin-left: 673px;
-        margin-top: 70px;
-        padding-bottom: 500px;
+        font-size: 2vw;
+        margin-left: 47.3%;
+        margin-top: 5%;
         font-family: "League Spartan";
       }
 
-      .aboutsec {
-          position: relative;
-          display: inline-flex;
-          margin-top: 200px;
-          margin-left: 135px;
-      }
-
-      .aboutsec img {
-          margin-right: 95px;
-      }
-
-      .abouthead {
-        position: relative;
-        display: inline-flex;
-        margin-top: 200px;
-        margin-left: 135px;
-        color: white;
-        font-family: "League Spartan";
-        font-weight: 200;
-        font-size: 20px;
-      }
-
-      .personal {
-          white-space: nowrap;
-          margin-top: -175px;
-          margin-left: 85px;
-      }
-
-      .group {
-        white-space: nowrap;
-        margin-top: -175px;
-        margin-left: 60px;
+    .imagerow {
+      position: relative;
+      display: flex;
+      margin-left: 12%;
+      margin-top: 5%;
+      z-index: 2;
+    }
+    
+    .column {
+      flex: 33.33%;
+      padding: 5px;
     }
 
-    .experts {
-        white-space: nowrap;
-        margin-top: -175px;
-        margin-left: 105px;
+    .wordrow {
+      display: flex;
+      margin-left: 2%;
+      margin-top: 0%;
+    }
+    
+    .column1 {
+      flex: 33.33%;
+      padding: 5px;
     }
 
-    .personal.p {
-        white-space: normal;
-        display: inline-flex;
-        margin-top: -135px;
-        margin-left: -325px;
-        text-align: center;
-        width: 370px;
-        padding-top: 0px;
-        line-height: 20px;
-        font-size: 15px;
-        font-family: "League Spartan";
-      }
-
-    .group.p {
-      white-space: normal;
-      display: inline-flex;
-      margin-top: -135px;
-      margin-left: -285px;
-      text-align: center;
-      width: 370px;
-      padding-top: 0px;
-      line-height: 20px;
-      font-size: 15px;
+    .aboutheader {
+      color: white;
       font-family: "League Spartan";
+      font-size: 1.6vw;
     }
 
-    .experts.p {
-        white-space: normal;
-        display: inline-flex;
-        margin-top: -135px;
-        margin-left: -305px;
-        text-align: center;
-        width: 370px;
-        padding-top: 0px;
-        line-height: 20px;
-        font-size: 15px;
-        font-family: "League Spartan";
-      }
+    .aboutheader.g {
+      margin-left: 40%;
+    }
+
+    .aboutheader.p {
+      margin-left: 23.5%;
+    }
+
+    .aboutheader.e {
+      margin-left: 17.5%;
+    }
+
+    .para {
+      color:white;
+      text-align: center;
+      font-family: "League Spartan";
+      font-size: 1.2vw;
+      line-height: 110%;
+      font-weight: 200;
+      width: 65%;
+    }
+
+    .para.g {
+      margin-top: -2%;
+      margin-left: 20%;
+      width: 75%;
+    }
+
+    .para.p {
+      margin-top: -2%;
+      margin-left: 7%;
+      width: 80%;
+    }
+
+    .para.e {
+      margin-top: -2%;
+      margin-left: 0%;
+      width: 75%;
+    }
 
       #meet {
-        position: absolute;
+        position: relative;
         display: block;
         border-style: solid;
         border-radius: 15px;
         background-color: gold;
         color: black;
         font-weight: 500;
-        margin-left: 615px;
-        margin-top: 50px;
+        margin-left: 41%;
         border-color: rgb(160, 113, 43);
+        padding: 1%;
+        font-size: 1.5vw;
+        width: 18%;
+        height: auto;
       }
 
+      #meet:hover {
+        background-color: white;
+      }
+    
       #hours {
-        position: absolute;
+        position: relative;
         display: block;
         color: rgb(255, 255, 255);
         font-weight: 500;
-        font-size: 30px;
-        margin-left: 672px;
-        margin-top: 185px;
-        padding-bottom: 500px;
+        font-size: 2.5vw;
+        margin-left: 46%;
+        margin-top: -3%;
         font-family: "League Spartan";
       }
 
       .days {
-        position: absolute;
+        position: relative;
         display: block;
         color: rgb(255, 255, 255);
         font-weight: 500;
-        font-size: 25px;
-        margin-left: 585px;
-        margin-top: 225px;
-        padding-bottom: 500px;
+        font-size: 2vw;
         font-family: "League Spartan";
         text-align: center;
+        margin-left: 0%;
+        margin-bottom: ;
       }
 
       .reach {
     position: absolute;
     text-align: center;
-    margin-top: 650px;
-    padding-top: 45px;
+    margin-top: 3%;
+    padding-top: 2%;
     display: block;
     color: rgb(0, 0, 0);
     background-color: rgb(255, 217, 0);
     width: 100%;
-    height: 80%;
+    height: 76%;
     left: 0;
     font-family: "League Spartan";
     font-weight: 500;
-    font-size: 40px;
-      }
+    font-size: 2vw;
+   }
 
     #contact {
-        position: absolute;
+        position: relative;
         display: block;
         border-style: solid;
         border-radius: 15px;
         background-color: gold;
         color: black;
         font-weight: 500;
-        margin-left: 475px;
-        margin-top: 760px;
+        margin-left: 28%;
+        margin-top: 10%;
+        font-size: 1.5vw;
+        padding: 1%;
         border-color: rgb(0, 0, 0);
+        width: 17%;
+        height: auto;
+    }
+
+    #contact:hover {
+      background-color: white;
     }
 
     .or {
-        position: absolute;
+    position: relative;
     text-align: center;
-    margin-left: 690px;
-    margin-top: 730px;
-    padding-top: 45px;
+    margin-left: 0%;
+    margin-top: -2.5%;
     display: block;
     color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
     font-family: "League Spartan";
     font-weight: 500;
-    font-size: 30px;
+    width: 100%;
+    height: auto;
+    font-size: 2vw;
     }
 
     #buy {
-        position: absolute;
+        position: relative;
         display: block;
         border-style: solid;
         border-radius: 15px;
         background-color: gold;
         color: black;
-        font-weight: 700;
-        margin-left: 770px;
-        margin-top: 760px;
+        font-weight: 500;
+        margin-left: 55%;
+        margin-top: -4.65%;
+        padding: 1%;
+        font-size: 1.5vw;
         border-color: rgb(0, 0, 0);
+        width: 17%;
+        height: auto;
     }
 
-    .vmtutor {
-    position: absolute;
+    #buy:hover {
+      background-color: white;
+    }
+
+    .newsletter {
+      position: absolute;
     text-align: center;
-    margin-left: 655px;
-    margin-top: 1220px;
+    margin-top: 2%;
     display: block;
     color: rgb(0, 0, 0);
     background-color: rgb(255, 217, 0);
+    width: 100%;
+    left: 0;
     font-family: "League Spartan";
     font-weight: 500;
-    font-size: 20px;
+    font-size: 2vw;
     }
 
     .top a {
-    position: absolute;
+    position: relative;
     text-align: center;
-    margin-top: 1125px;
-    margin-left: 660px;
+    margin-top: 1%;
+    margin-left: -1%;
     display: block;
     color: rgb(0, 0, 0);
     background-color: rgb(255, 217, 0);
     font-family: "League Spartan";
     font-weight: 500;
     font-size: 20px;
-    }
-
-    .copy {
-    position: absolute;
-    text-align: center;
-    margin-left: 535px;
-    margin-top: 1250px;
-    display: block;
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 217, 0);
-    font-family: "League Spartan";
-    font-weight: 500;
-    font-size: 15px;
     }
 
     .footer {
@@ -463,22 +467,23 @@ button:hover {
     /* Style the form element with a border around it */
 form {
     border: 4px solid black;
-    position: absolute;
-    margin-top: 830px;
-    margin-left: 485px;
+    position: relative;
+    margin-top: 5%;
+    margin-left: 35%;
+    width: 30%;
   }
   
   /* Add some padding and a grey background color to containers */
   .container {
-    padding: 20px;
+    padding: 10px;
     background-color: rgb(255, 216, 0);
   }
   
   /* Style the input elements and the submit button */
   input[type=text], input[type=submit] {
     width: 100%;
-    padding: 12px;
-    margin: 8px 0;
+    padding: 6px;
+    margin: 6px 0;
     display: inline-block;
     border: 3px solid black;
     border-radius: 16px;
@@ -495,23 +500,26 @@ form {
     color: rgb(0, 0, 0);
     font-weight: 500;
     border-color: rgb(0, 0, 0);
-    font-size: 20px;
+    font-size: 1.5vw;
     letter-spacing: 2px;
-    padding: 10px;
+    padding: 1.5%;
     width: 50%;
-    margin-left: 97px;
+    margin-left: 25%;
     margin-top: 10px;
   }
   
   input[type=submit]:hover {
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     cursor: pointer;
   }
 
   .wrapper {
-    margin-top: 1124px;
-    margin-left: 600px;
+    position:relative;
+    background-color: rgb(255, 217, 0);
+    display: flex;
+    margin-top: 1%;
+    margin-left: 37%;
   }
 
   .wrapper .icon {
@@ -519,8 +527,8 @@ form {
   background-color: #000000;
   border-radius: 50%;
   margin: 10px;
-  width: 50px;
-  height: 50px;
+  width: 10%;
+  height: 40%;
   line-height: 50px;
   font-size: 22px;
   display: inline-block;
@@ -530,6 +538,7 @@ form {
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   color: rgb(51, 51, 51);
   text-decoration: none;
+  margin-left: 2%;
 }
 .wrapper .tooltip {
   position: absolute;
@@ -538,7 +547,7 @@ form {
   font-size: 14px;
   background-color: #ffffff;
   color: #ffffff;
-  padding: 5px 8px;
+  padding: 2%;
   border-radius: 5px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   opacity: 0;
@@ -564,7 +573,7 @@ form {
 }
 .wrapper .icon:hover span,
 .wrapper .icon:hover .tooltip {
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0);
 }
 .wrapper .facebook:hover,
 .wrapper .facebook:hover .tooltip,
@@ -587,12 +596,40 @@ form {
 
 .fab.fa-instagram {
     background-color: rgba(0, 0, 0, 0);
+    flex: 33.33%;
 }
 
 .fab.fa-twitter {
     background-color: #00000000;
+    flex: 33.33%;
 }
 
 .fab.fa-facebook-f {
     background-color: rgba(0, 0, 0, 0);
+    flex: 33.33%;
 }
+
+.vmtutor {
+  position: relative;
+  text-align: center;
+  margin-left: -0.5%;
+  margin-top: 1%;
+  display: block;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 217, 0);
+  font-family: "League Spartan";
+  font-weight: 500;
+  font-size: 1.5vw;
+  }
+
+  .copy {
+    position: relative;
+    text-align: center;
+    display: block;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 217, 0);
+    font-family: "League Spartan";
+    font-weight: 500;
+    font-size: 1vw;
+    margin-top: -1%;
+    }

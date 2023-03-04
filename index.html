@@ -7,7 +7,7 @@
     <title>VM Tutoring</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="title icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2R1uo9HF9nrppTwsLEFPrLkicol_ybGVMiYU-bgGjUyaXMjMpiHTkJRqvaPtSxCrGaMrO-nZwd3zFoFOElyVtmd-tg84qulxgzrzNh3AD3VRJ771Ui8TYZV664NxqXbWTmz_ilpCXjH87ZQABjLMAfZPVlPBEXpeUA1rMbhHOIRv7wX4oPFrbtA8FMw/s320/VM%20(1).png" type ="image/png">
-    <script src="./vmtutoring-site/jquery.js"></script>
+    <script src="/Users/TANA/sites/vmtutoring-site/vmtutoring-site/jquery.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;500&display=swap" rel="stylesheet">
@@ -20,74 +20,181 @@
 <body>
     <a id="top"></a>
     <div id = "logo">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiI1ZklUr81n9gwa6JeXkC8AkyOAHc572Gpjis20_bKSevSAJY8vEal8sISvEtO74k1RRLoTyiOav0TOLbQ3_5ZGa9zuk-PoyMDFiSMFNHuC30OFKbR7CE60JF4L1AvjMEgJTK-2xePrZW4_6Y_dSs5-Rmw2a8CO2vXn11Rf4Qpgs8gtF3o-BEeC7D3SA/s320/VM%20(2).png">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiI1ZklUr81n9gwa6JeXkC8AkyOAHc572Gpjis20_bKSevSAJY8vEal8sISvEtO74k1RRLoTyiOav0TOLbQ3_5ZGa9zuk-PoyMDFiSMFNHuC30OFKbR7CE60JF4L1AvjMEgJTK-2xePrZW4_6Y_dSs5-Rmw2a8CO2vXn11Rf4Qpgs8gtF3o-BEeC7D3SA/s320/VM%20(2).png" style="width: 100%;">
         <div class = "header">
-            <script>
-                 $( document ).click(function() {
-                   $( ".header" ).toggle( "bounce", { times: 2 }, "slow" );
-                 });
-                         </script>
              <ul>
-                 <li><link rel ="header links" href = "home.html"> <button class = "header home"> HOME </button></li>
+                 <li><link rel ="header links" href = "index.html"> <button class = "header home"> HOME </button></li>
                  <li><link rel ="header links" href = "about.html"> <button class = "header about"> ABOUT </button></li>
                  <li><link rel ="header links" href = "contact.html"> <button class = "header contact"> CONTACT US </button></li>
                  <li><link rel ="header links" href = "faq.html"> <button class = "header faq"> FAQ </button></li>
                  <li><link rel ="header links" href = "login.html"> <button class = "header tutor"> OUR TUTORS </button></li>
                  <link rel ="header links" href = "book.html"> <button id = "book"> BOOK NOW </button>
              </ul>
-             </div>
-       </div>
-       <div class = "box">
-           <p> black </p>
+             <style>
+              .dropbtn {
+                position: relative;
+                margin-left: -175%;
+                margin-top: 25%;
+                background-color: rgb(255, 217, 0);
+                color: rgb(0, 0, 0);
+                padding: 15px;
+                font-size: 15px;
+                font-weight: 500;
+                font-family: "League Spartan";
+                border-radius: 16px;
+                border-style: solid;
+                border-color: rgb(160, 113, 43);
+                cursor: pointer;
+              }
+              
+              .dropbtn:hover, .dropbtn:focus {
+                background-color: #ffffff;
+              }
+              
+              .dropdown {
+                position: relative;
+                display: inline-block;
+                margin-left: -90%;
+              }
+              
+              .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: rgb(255, 217, 0);
+                color: rgb(255, 217, 0);
+                border-style: solid;
+                border-color: black;
+                border-radius: 16px;
+                margin-left: -25%;
+                min-width: 160px;
+                overflow: auto;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+              }
+              
+              .dropdown-content a {
+                color: black;
+                font-family: "League Spartan";
+                font-size: 20px;
+                font-weight: 200;
+                text-align: center;
+                background-color: rgb(255, 217, 0);
+                z-index: 100;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+              }
+              
+              .dropdown a:hover {
+                background-color: rgb(255, 255, 255);
+                font-weight: 500;
+              }
+              
+              .show {
+                display: block;
+              }
+
+              .dropdown-content a.drophome {
+                text-decoration: underline;
+              }
+
+              </style>
+             <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn"> MENU </button>
+              <div id="myDropdown" class="dropdown-content">
+                <a class="drophome" href="index.html"> HOME </a>
+                <a href="about.html"> ABOUT </a>
+                <a href="contact.html"> CONTACT US </a>
+                <a href="faq.html"> FAQ </a>
+                <a href="login.html"> OUR TUTORS </a>
+                <a href="book.html"> BOOK NOW </a>
+              </div>
+              <script>
+                /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+              </script>
+              </div>
+            </div>
        </div>
        <video autoplay muted loop id="study">
         <source src="https://websites.godaddy.com/categories/v4/videos/raw/video/kZ5PEA9" type="video/mp4">
       </video>
       <div class="content">
       </div> 
-
-      <h1 class="learn">Let's Learn</h1>
-        <p class="connect">Connect with our passionate tutors to help you reach your learning goals</p>
+      <div class="learn">Let's Learn</div>
+        <p class="connect">Connect with our passionate tutors to help you reach your learning goals and take your education to the next level</p>
 <link rel ="header links" href = "./about.html"> <button id = "learn"> LEARN MORE </button>
-<p>Down arrow: <i class="arrow down"></i></p>
-<p>Down arrow: <i class="arrow2 down"></i></p>
+
+<p class="black box"> BLACK </p>
 
 <h1 id="about"> ABOUT </h1>
 
-<div class="aboutsec">
-    <img src="https://img1.wsimg.com/isteam/stock/05bf86be798b99165582086b8ad4b970d94d13cb0012cb99af57d7b654bae9ef" width= "25%" height="auto">
-    <img src="https://img1.wsimg.com/isteam/stock/upWwVY6y51c6x2DwE" width= "25%" height="auto">
-    <img src="https://img1.wsimg.com/isteam/stock/103103" width= "25%" height="auto">
+<div class="imagerow">
+  <div class="column">
+    <img src="https://img1.wsimg.com/isteam/stock/05bf86be798b99165582086b8ad4b970d94d13cb0012cb99af57d7b654bae9ef/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:365,h:365,cg:true" alt="Group Session" style="width:60%">
+  </div>
+  <div class="column">
+    <img src="https://img1.wsimg.com/isteam/stock/upWwVY6y51c6x2DwE/:/cr=t:0%25,l:16.67%25,w:66.67%25,h:100%25/rs=w:365,h:365,cg:true" alt="One-On-One Session" style="width:60%">
+  </div>
+  <div class="column">
+    <img src="https://img1.wsimg.com/isteam/stock/103103/:/cr=t:0%25,l:16.67%25,w:66.67%25,h:100%25/rs=w:365,h:365,cg:true" alt="Chalkboard" style="width:60%">
+  </div>
 </div>
 
-<div class="abouthead">  
+<div class="wordrow">
+  <div class="column1">
+    <h2 class="aboutheader g"> Group Sessions </h2>
 
-    <h2 class="group"> Group Sessions </h2>
-    <p class="group p"> Group tutoring sessions are the "sweet spot" in between our private 
+<p class="para g"> Group tutoring sessions are the "sweet spot" in between our private 
         tutoring and standard classroom instruction. Group tutors can give more attention
         to students in a small group than they would in a large classroom, but there are 
         still enough students to keep everyone engaged. Students may be inspired by others
         as they watch each other work through problems and support each other, since every
         student brings something new to the group. </p>
+  </div>
+  <div class="column1">
+    <h2 class="aboutheader p"> Personalized Solutions </h2>
 
-        <h2 class="personal"> Personalized Solutions </h1>
-            <p class="personal p"> We offer private tutoring services that are personally
-                tailored to your learning needs. Every student is different and we
-                formulate individual learning plans for each according to different situations
-                and according to their preferences and aptitude. We not only encourage 
-                faster learning progress, but we also strive to cultivate and establish 
-                good living and learning habits. </p>
+    <p class="para p"> We offer private tutoring services that are personally
+      tailored to your learning needs. Every student is different and we
+      formulate individual learning plans for each according to different situations
+      and according to their preferences and aptitude. We not only encourage 
+      faster learning progress, but we also strive to cultivate and establish 
+      good living and learning habits. </p>
+  </div>
+  <div class="column1">
+    <h2 class="aboutheader e"> Experienced Tutors </h2>
 
-    <h2 class="experts"> Experienced Tutors </h2>
-    <p class="experts p"> Not only will they patiently and passionately work with each student, but they will actively monitor your 
-        child's progress and offer the perfect learning solution for everybody. All of our tutors come from a strong educational background and
-        we have teamed up at VM Tutoring because we all have a common goal. We provide our tutors 
-        with the opportunity to connect to something bigger, supporting our students every step of the way 
-        as they learn and grow. </p>
-
-    </div>
+      <p class="para e"> Not only will they patiently and passionately work with each student, but they will actively monitor your 
+          child's progress and offer the perfect learning solution for everybody. All of our tutors come from a strong educational background and
+          we have teamed up at VM Tutoring because we all have a common goal. We provide our tutors 
+          with the opportunity to connect to something bigger, supporting our students every step of the way 
+          as they learn and grow. </p>
+  </div>
+</div>
 
     <link rel ="header links" href = "./sites/vm-tutoring/about.html"> <button id = "meet"> MEET OUR TEAM </button>
+
+    <p class = "line"> just a line lol </p>
+
+    <p class = "lineb"> just another line lol </p>
 
     <h1 id="hours"> HOURS </h1>
 
@@ -109,11 +216,7 @@
 
     <link rel ="header links" href = "./sites/vm-tutoring/book.html"> <button id = "buy"> BOOK NOW </button>
 
-    <div class="name">
-        <p class="vmtutor"> VM Tutoring </p>
-        <p class="copy"> Copyright © 2023 VM Tutoring - All Rights Reserved. </p>
-<div class="top">
-<a href="#top">Back to top</a>
+    <h1 class="newsletter"> Join our newsletter to hear about new course offerings and more!</h1>
 
 <div class = "footer">
     
@@ -131,6 +234,9 @@
         </div>
       </form>
 
+      <div class="top">
+        <a href="#top">Back to top</a>
+
       <div class="wrapper">
         <a href="https://www.facebook.com/profile.php?id=100089984517759" class="icon facebook">
           <div class="tooltip">Facebook</div>
@@ -145,6 +251,10 @@
           <span><i class="fab fa-instagram"></i></span>
         </a>
       </div>
+
+      <div class="name">
+        <p class="vmtutor"> VM Tutoring </p>
+        <p class="copy"> Copyright © 2023 VM Tutoring - All Rights Reserved. </p>
 
 </div>
 </div>
